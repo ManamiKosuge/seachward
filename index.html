@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>東京都どこ区？</title>
+    <link rel="stylesheet" href="css/ress.css">
+    <style>
+    .wrapper{
+      padding: 1em;
+    }
+    form{
+      margin-top: 1em;
+    }
+    input[type="text"]{
+      border-radius: 5px;
+      border: 1px solid #000;
+    }
+    input[type="button"]{
+      border-radius: 5px;
+      border: 1px solid #000;
+      margin-left: 0.5em;
+      padding: 0 0.5em;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>東京都どこ区？</h1>
+      <p>東京都●●区って言われても正直わからん！っていう人用です。入力欄に区の名前を入力すると有名なスポットやGoogleマップが表示されます。</p>
+      <form>
+        <input type="text" value="" id="textBox">
+        <input type="button" value="表示" onclick="func1()">
+      </form>
+      <div id="answer"></div>
+      <div id="answerList"></div>
+    </div>
+  </body>
+  <script>
+  function func1(){　//入力欄に入力したら下に結果が表示される。
+    var textBox = document.getElementById("textBox").value;
+    textBox = textBox + "は以下のものがあります。";
+    if(textBox.match("足立区")){
+      document.getElementById("answerList").innerHTML = "<p>荒川、見沼代親水公園、北千住ルミネ</p><p><a href='https://goo.gl/maps/ktcyawmEtsjv3Arr7' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("葛飾区")){
+      document.getElementById("answerList").innerHTML = "<p>両さん、柴又帝釈天、堀切菖蒲園</p><p><a href='https://goo.gl/maps/S9w82Q3fYyQ9f51g7' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("江戸川区")){
+      document.getElementById("answerList").innerHTML = "<p>葛西臨海公園、最勝寺、地下鉄博物館</p><p><a href='https://goo.gl/maps/vquvYkEtJtYb9mLUA' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("江東区")){
+      document.getElementById("answerList").innerHTML = "<p>東京ビックサイト、深川不動堂、亀戸天神社</p><p><a href='https://goo.gl/maps/WWLhTtXFRARz4GTC8' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("中央区")){
+      document.getElementById("answerList").innerHTML = "<p>銀座、旧築地市場、明治座</p><p><a href='https://goo.gl/maps/PNZLXHVh3bpfJBag7' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("港区")){
+      document.getElementById("answerList").innerHTML = "<p>東京タワー、お台場、六本木ヒルズ</p><p><a href='https://goo.gl/maps/J33gBFjLNy7SfKMt7' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("品川区")){
+      document.getElementById("answerList").innerHTML = "<p>天王洲アイル、大井競馬場、戸越銀座</p><p><a href='https://goo.gl/maps/zkgWntmEVHvfMCb68' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("世田谷区")){
+      document.getElementById("answerList").innerHTML = "<p>世田谷公園、下北沢、二子玉川</p><p><a href='https://goo.gl/maps/zhV9kS4hEAADfRnD9' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("杉並区")){
+      document.getElementById("answerList").innerHTML = "<p>東京工芸大学、太田黒公園、大宮八幡宮</p><p><a href='https://goo.gl/maps/HFdTCuSp7w7qxBg5A' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("練馬区")){
+      document.getElementById("answerList").innerHTML = "<p>旧豊島園、石神井公園、東映アニメーション</p><p><a href='https://goo.gl/maps/hvMo2E987eaMtrQLA' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("板橋区")){
+      document.getElementById("answerList").innerHTML = "<p>諏訪神社、乗蓮寺、板橋区立教教育科学館</p><p><a href='https://goo.gl/maps/TCe8mfiAbW2W9GVGA' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("北区")){
+      document.getElementById("answerList").innerHTML = "<p>飛鳥山公園、旧古河庭園、十条銀座商店街</p><p><a href='https://goo.gl/maps/M48658m1SNqkqePE7' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("荒川区")){
+      document.getElementById("answerList").innerHTML = "<p>日暮里繊維街、あらかわ遊園、都立汐入公園</p><p><a href='https://goo.gl/maps/MCsipgGDenSYdzSZ8' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("墨田区")){
+      document.getElementById("answerList").innerHTML = "<p>東京スカイツリー、吾妻橋、錦糸公園</p><p><a href='https://goo.gl/maps/Xu53e9rdgu9RQwQo9' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("目黒区")){
+      document.getElementById("answerList").innerHTML = "<p>目黒川、自由が丘、旧前田侯爵邸洋館</p><p><a href='https://goo.gl/maps/BEcJeybpLvq7wZzp6' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("渋谷区")){
+      document.getElementById("answerList").innerHTML = "<p>表参道、恵比寿ガーデンプレイス、渋谷ヒカリエ</p><p><a href='https://goo.gl/maps/8jvrmhuC61VUWud89' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("新宿区")){
+      document.getElementById("answerList").innerHTML = "<p>東京都庁、明治神宮外苑、神楽坂</p><p><a href='https://goo.gl/maps/renjxyPovZeKLVaXA' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("豊島区")){
+      document.getElementById("answerList").innerHTML = "<p>池袋サンシャインシティ、巣鴨地蔵通り商店街、鬼子母神堂</p><p><a href='https://goo.gl/maps/M9NoqFxvZV6iyjXJ9' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("文京区")){
+      document.getElementById("answerList").innerHTML = "<p>東京ドーム、椿山荘、鳩山会館</p><p><a href='https://goo.gl/maps/N38ZvrHJqJe6bU8C8' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("台東区")){
+      document.getElementById("answerList").innerHTML = "<p>浅草寺、上野動物園、西郷隆盛像</p><p><a href='https://goo.gl/maps/76r9hnpakeUGmohKA' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("千代田区")){
+      document.getElementById("answerList").innerHTML = "<p>東京駅、皇居、秋葉原電気街</p><p><a href='https://goo.gl/maps/YE8y4iQBMFAUjj2b8' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("大田区")){
+      document.getElementById("answerList").innerHTML = "<p>羽田空港、田園調布、洗足池公園</p><p><a href='https://goo.gl/maps/yTHTcxmMonfxREew8' target='_blank'>地図はこちら</a></p>";
+    }else if(textBox.match("中野区")){
+      document.getElementById("answerList").innerHTML = "<p>中野サンプラザ、中野ブロードウェイ、新井薬師</p><p><a href='https://goo.gl/maps/SpKm6HUuu9WEQcgz6' target='_blank'>地図はこちら</a></p>";
+    }else{
+      document.getElementById("answerList").innerHTML = "<p>ここは東京都23区ではありません。</p>";
+    }
+    //解答欄に表示
+    document.getElementById("answer").innerHTML = textBox;
+  }
+  </script>
+</html>
